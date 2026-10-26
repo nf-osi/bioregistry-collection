@@ -158,6 +158,10 @@ export const bioregistryRules = [
     onMatch,
   },
   {
+    regex: /(cl:\d{7})/,
+    onMatch,
+  },
+  {
     regex: /(clinicaltrials:NCT\d{8})/,
     onMatch,
   },
@@ -782,7 +786,7 @@ export const bioregistryRules = [
     onMatch,
   },
   {
-    regex: /(uniprot:(?:(?:[A-N,R-Z][0-9](?:[A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|(?:[O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(?:\.\d+)?(?:-\d+)?(?:#PRO_\d+)?))/,
+    regex: /(uniprot:(?:[OPQ]\d[A-Z0-9]{3}\d|[A-NR-Z]\d(?:[A-Z][A-Z0-9]{2}\d){1,2}))/,
     onMatch,
   },
   {
